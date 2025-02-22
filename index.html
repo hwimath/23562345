@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>French Family Words Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    section {
+      margin-bottom: 30px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 10px 0;
+    }
+    table td, table th {
+      padding: 8px;
+      border: none;
+    }
+    .result {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .correct {
+      color: green;
+    }
+    .incorrect {
+      color: red;
+    }
+    input[type="text"] {
+      width: 120px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    select {
+      padding: 3px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>프랑스어 가족 단어 학습 게임</h1>
+<p>아래 단계를 차례대로 진행하며, 영어 뜻을 프랑스어 단어로 매칭하거나 스펠링을 완성해 보세요!</p>
+
+<!-- =========================================
+     STEP 1: 영어 ↔ 프랑스어 매칭 게임
+     ========================================= -->
+<section>
+  <h2>1단계: 영어 ↔ 프랑스어 매칭</h2>
+  <p>영어 뜻에 해당하는 올바른 프랑스어 단어를 선택하세요.</p>
+  <table>
+    <tr>
+      <th>영어 (English)</th>
+      <th>프랑스어 (French)</th>
+    </tr>
+    <!-- Father -->
+    <tr>
+      <td>Father</td>
+      <td>
+        <select id="step1_0">
+          <option value="">-- 선택 --</option>
+          <option value="le père">le père</option>
+          <option value="la mère">la mère</option>
+          <option value="le frère">le frère</option>
+          <option value="la sœur">la sœur</option>
+          <option value="le grand-père">le grand-père</option>
+          <option value="la grand-mère">la grand-mère</option>
+          <option value="l'oncle">l'oncle</option>
+          <option value="la tante">la tante</option>
+          <option value="le cousin">le cousin</option>
+          <option value="la cousine">la cousine</option>
+        </select>
+      </td>
+    </tr>
+    <!-- Mother -->
+    <tr>
+      <td>Mother</td>
+      <td>
+        <select id="step1_1">
+          <option value="">-- 선택 --</option>
+          <option value="le père">le père</option>
+          <option value="la mère">la mère</option>
+          <option value="le frère">le frère</option>
+          <option value="la sœur">la sœur</option>
+          <option value="le grand-père">le grand-père</option>
+          <option value="la grand-mère">la grand-mère</option>
+          <option value="l'oncle">l'oncle</option>
+          <option value="la tante">la tante</option>
+          <option value="le cousin">le cousin</option>
+          <option value="la cousine">la cousine</option>
+        </select>
+      </td>
+    </tr>
+    <!-- Brother -->
+    <tr>
+      <td>Brother</td>
+      <td>
+        <select id="step1_2">
+          <option value="">-- 선택 --</option>
+          <option value="le père">le père</option>
+          <option value="la mère">la mère</option>
+          <option value="le frère">le frère</option>
+          <option value="la sœur">la sœur</option>
+          <option value="le grand-père">le grand-père</option>
+          <option value="la grand-mère">la grand-mère</option>
+          <option value="l'oncle">l'oncle</option>
+          <option value="la tante">la tante</option>
+          <option value="le cousin">le cousin</option>
+          <option value="la cousine">la cousine</option>
+        </select>
+      </td>
+    </tr>
+    <!-- Sister -->
+    <tr>
+      <td>Sister</td>
+      <td>
+        <select id="step1_3">
+          <option value="">-- 선택 --</option>
+          <option value="le père">le père</option>
+          <option value="la mère">la mère</option>
+          <option value="le frère">le frère</option>
+          <option value="la sœur">la sœur</option>
+          <option value="le grand-père">le grand-père</option>
+          <option value="la grand-mère">la grand-mère</option>
+          <option value="l'oncle">l'oncle</option>
+          <option value="la tante">la tante</option>
+          <option value="le cousin">le cousin</option>
+          <option value="la cousine">la cousine</option>
+        </select>
+      </td>
+    </tr>
+    <!-- Grandfather -->
+    <tr>
+      <td>Grandfather</td>
+      <td>
+        <select id="step1_4">
+          <option value="">-- 선택 --</option>
+          <option value="le père">le père</option>
+          <option value="la mère">la mère</option>
+          <option value="le frère">le frère</option>
+          <option value="la sœur">la sœur</option>
+          <option value="le grand-père">le grand-père</option>
+          <option value="la grand-mère">la grand-mère</option>
+          <option value="l'oncle">l'oncle</option>
+          <option value="la tante">la tante</option>
+          <option value="le cousin">le cousin</option>
+          <option value="la cousine">la cousine</option>
+        </select>
+      </td>
+    </tr>
+    <!-- Grandmother -->
+    <tr>
+      <td>Grandmother</td>
+      <td>
+        <select id="step1_5">
+          <option value="">-- 선택 --</option>
+          <option value="le père">le père</option>
+          <option value="la mère">la mère</option>
+          <option value="le frère">le frère</option>
+          <option value="la sœur">la sœur</option>
+          <option value="le grand-père">le grand-père</option>
+          <option value="la grand-mère">la grand-mère</option>
+          <option value="l'oncle">l'oncle</option>
+          <option value="la tante">la tante</option>
+          <option value="le cousin">le cousin</option>
+          <option value="la cousine">la cousine</option>
+        </select>
+      </td>
+    </tr>
+    <!-- Uncle -->
+    <tr>
+      <td>Uncle</td>
+      <td>
+        <select id="step1_6">
+          <option value="">-- 선택 --</option>
+          <option value="le père">le père</option>
+          <option value="la mère">la mère</option>
+          <option value="le frère">le frère</option>
+          <option value="la sœur">la sœur</option>
+          <option value="le grand-père">le grand-père</option>
+          <option value="la grand-mère">la grand-mère</option>
+          <option value="l'oncle">l'oncle</option>
+          <option value="la tante">la tante</option>
+          <option value="le cousin">le cousin</option>
+          <option value="la cousine">la cousine</option>
+        </select>
+      </td>
+    </tr>
+    <!-- Aunt -->
+    <tr>
+      <td>Aunt</td>
+      <td>
+        <select id="step1_7">
+          <option value="">-- 선택 --</option>
+          <option value="le père">le père</option>
+          <option value="la mère">la mère</option>
+          <option value="le frère">le frère</option>
+          <option value="la sœur">la sœur</option>
+          <option value="le grand-père">le grand-père</option>
+          <option value="la grand-mère">la grand-mère</option>
+          <option value="l'oncle">l'oncle</option>
+          <option value="la tante">la tante</option>
+          <option value="le cousin">le cousin</option>
+          <option value="la cousine">la cousine</option>
+        </select>
+      </td>
+    </tr>
+    <!-- Cousin (boy) -->
+    <tr>
+      <td>Cousin (boy)</td>
+      <td>
+        <select id="step1_8">
+          <option value="">-- 선택 --</option>
+          <option value="le père">le père</option>
+          <option value="la mère">la mère</option>
+          <option value="le frère">le frère</option>
+          <option value="la sœur">la sœur</option>
+          <option value="le grand-père">le grand-père</option>
+          <option value="la grand-mère">la grand-mère</option>
+          <option value="l'oncle">l'oncle</option>
+          <option value="la tante">la tante</option>
+          <option value="le cousin">le cousin</option>
+          <option value="la cousine">la cousine</option>
+        </select>
+      </td>
+    </tr>
+    <!-- Cousin (girl) -->
+    <tr>
+      <td>Cousin (girl)</td>
+      <td>
+        <select id="step1_9">
+          <option value="">-- 선택 --</option>
+          <option value="le père">le père</option>
+          <option value="la mère">la mère</option>
+          <option value="le frère">le frère</option>
+          <option value="la sœur">la sœur</option>
+          <option value="le grand-père">le grand-père</option>
+          <option value="la grand-mère">la grand-mère</option>
+          <option value="l'oncle">l'oncle</option>
+          <option value="la tante">la tante</option>
+          <option value="le cousin">le cousin</option>
+          <option value="la cousine">la cousine</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+  <button onclick="checkStep1()">Check Step 1</button>
+  <div id="resultStep1" class="result"></div>
+</section>
+
+<!-- =========================================
+     STEP 2: 스펠링 맞추기 (1글자 비우기)
+     ========================================= -->
+<section>
+  <h2>2단계: 프랑스어 스펠링 (1글자 비우기)</h2>
+  <p>영어 뜻을 보고, 빠진 1글자를 채워서 정확한 프랑스어 단어를 완성해 보세요.</p>
+  <table>
+    <tr>
+      <th>영어</th>
+      <th>프랑스어 (빈칸 1글자)</th>
+    </tr>
+    <tr>
+      <td>Father</td>
+      <td>
+        p_re
+        <input type="text" id="step2_0" placeholder="p_re" />
+      </td>
+    </tr>
+    <tr>
+      <td>Mother</td>
+      <td>
+        m_re
+        <input type="text" id="step2_1" placeholder="m_re" />
+      </td>
+    </tr>
+    <tr>
+      <td>Brother</td>
+      <td>
+        fr_re
+        <input type="text" id="step2_2" placeholder="fr_re" />
+      </td>
+    </tr>
+    <tr>
+      <td>Sister</td>
+      <td>
+        s_ur
+        <input type="text" id="step2_3" placeholder="s_ur" />
+      </td>
+    </tr>
+    <tr>
+      <td>Uncle</td>
+      <td>
+        l'_ncle
+        <input type="text" id="step2_4" placeholder="l'_ncle" />
+      </td>
+    </tr>
+  </table>
+  <button onclick="checkStep2()">Check Step 2</button>
+  <div id="resultStep2" class="result"></div>
+</section>
+
+<!-- =========================================
+     STEP 3: 스펠링 맞추기 (2글자 비우기)
+     ========================================= -->
+<section>
+  <h2>3단계: 프랑스어 스펠링 (2글자 비우기)</h2>
+  <p>영어 뜻을 보고, 빠진 2글자를 채워서 정확한 프랑스어 단어를 완성해 보세요.</p>
+  <table>
+    <tr>
+      <th>영어</th>
+      <th>프랑스어 (빈칸 2글자)</th>
+    </tr>
+    <tr>
+      <td>Grandfather</td>
+      <td>
+        gr__d-père
+        <input type="text" id="step3_0" placeholder="gr__d-père" />
+      </td>
+    </tr>
+    <tr>
+      <td>Grandmother</td>
+      <td>
+        gr_nd-m_re
+        <input type="text" id="step3_1" placeholder="gr_nd-m_re" />
+      </td>
+    </tr>
+    <tr>
+      <td>Aunt</td>
+      <td>
+        l_ t_nt_
+        <input type="text" id="step3_2" placeholder="l_ t_nt_" />
+      </td>
+    </tr>
+    <tr>
+      <td>Cousin (boy)</td>
+      <td>
+        c__sin
+        <input type="text" id="step3_3" placeholder="c__sin" />
+      </td>
+    </tr>
+    <tr>
+      <td>Cousin (girl)</td>
+      <td>
+        co_s_ne
+        <input type="text" id="step3_4" placeholder="co_s_ne" />
+      </td>
+    </tr>
+  </table>
+  <button onclick="checkStep3()">Check Step 3</button>
+  <div id="resultStep3" class="result"></div>
+</section>
+
+<!-- =========================================
+     STEP 4: 스펠링 맞추기 (3~4글자 비우기)
+     ========================================= -->
+<section>
+  <h2>4단계: 프랑스어 스펠링 (3~4글자 비우기)</h2>
+  <p>영어 뜻을 보고, 빠진 3~4글자를 채워서 정확한 프랑스어 단어를 완성해 보세요.</p>
+  <table>
+    <tr>
+      <th>영어</th>
+      <th>프랑스어 (빈칸 3~4글자)</th>
+    </tr>
+    <tr>
+      <td>Father</td>
+      <td>
+        p_ _ _ e
+        <input type="text" id="step4_0" placeholder="p___e" />
+      </td>
+    </tr>
+    <tr>
+      <td>Mother</td>
+      <td>
+        m_ _ _ e
+        <input type="text" id="step4_1" placeholder="m___e" />
+      </td>
+    </tr>
+    <tr>
+      <td>Brother</td>
+      <td>
+        f_ _ _ _ e
+        <input type="text" id="step4_2" placeholder="f____e" />
+      </td>
+    </tr>
+    <tr>
+      <td>Sister</td>
+      <td>
+        s_ _ r
+        <input type="text" id="step4_3" placeholder="s__r" />
+      </td>
+    </tr>
+    <tr>
+      <td>Uncle</td>
+      <td>
+        l'_ _ _ le
+        <input type="text" id="step4_4" placeholder="l'___le" />
+      </td>
+    </tr>
+  </table>
+  <button onclick="checkStep4()">Check Step 4</button>
+  <div id="resultStep4" class="result"></div>
+</section>
+
+<script>
+  /*******************************************************
+   * 1. (예시) 정답 데이터
+   *    → 첨부 파일의 단어를 반영하려면 아래 배열을 수정하세요!
+   *******************************************************/
+  // 1단계 (매칭) 정답
+  const answersStep1 = [
+    "le père",         // Father
+    "la mère",         // Mother
+    "le frère",        // Brother
+    "la sœur",         // Sister
+    "le grand-père",   // Grandfather
+    "la grand-mère",   // Grandmother
+    "l'oncle",         // Uncle
+    "la tante",        // Aunt
+    "le cousin",       // Cousin (boy)
+    "la cousine"       // Cousin (girl)
+  ];
+
+  // 2단계 (1글자 비우기)
+  const answersStep2 = [
+    "père",    // p_re
+    "mère",    // m_re
+    "frère",   // fr_re
+    "sœur",    // s_ur
+    "l'oncle"  // l'_ncle
+  ];
+
+  // 3단계 (2글자 비우기)
+  // 순서: Grandfather, Grandmother, Aunt, Cousin(boy), Cousin(girl)
+  const answersStep3 = [
+    "grand-père",  // gr__d-père  (예: a, n)
+    "grand-mère",  // gr_nd-m_re  (예: a, è)
+    "la tante",    // l_ t_nt_    (예: a, a)
+    "cousin",      // c__sin      (ou)
+    "cousine"      // co_s_ne     (u, i)
+  ];
+
+  // 4단계 (3~4글자 비우기)
+  // 순서: Father, Mother, Brother, Sister, Uncle
+  const answersStep4 = [
+    "père",    // p_ _ _ e
+    "mère",    // m_ _ _ e
+    "frère",   // f_ _ _ _ e
+    "sœur",    // s_ _ r
+    "l'oncle"  // l'_ _ _ le
+  ];
+
+  /*******************************************************
+   * 2. 채점 함수
+   *******************************************************/
+
+  // STEP 1: 매칭 게임
+  function checkStep1() {
+    let score = 0;
+    for (let i = 0; i < answersStep1.length; i++) {
+      const userChoice = document.getElementById(`step1_${i}`).value;
+      if (userChoice === answersStep1[i]) {
+        score++;
+      }
+    }
+    const resultEl = document.getElementById("resultStep1");
+    if (score === answersStep1.length) {
+      resultEl.innerHTML = `<span class="correct">Perfect! ${score}/${answersStep1.length} 정답입니다.</span>`;
+    } else {
+      resultEl.innerHTML = `<span class="incorrect">${score}/${answersStep1.length} 정답. 다시 시도해보세요!</span>`;
+    }
+  }
+
+  // STEP 2: 1글자 비우기
+  function checkStep2() {
+    let score = 0;
+    for (let i = 0; i < answersStep2.length; i++) {
+      const userAnswer = document.getElementById(`step2_${i}`).value.trim();
+      if (userAnswer === answersStep2[i]) {
+        score++;
+      }
+    }
+    const resultEl = document.getElementById("resultStep2");
+    if (score === answersStep2.length) {
+      resultEl.innerHTML = `<span class="correct">Excellent! ${score}/${answersStep2.length} 정답입니다.</span>`;
+    } else {
+      resultEl.innerHTML = `<span class="incorrect">${score}/${answersStep2.length} 정답. 조금 더 연습해 보세요!</span>`;
+    }
+  }
+
+  // STEP 3: 2글자 비우기
+  function checkStep3() {
+    let score = 0;
+    for (let i = 0; i < answersStep3.length; i++) {
+      const userAnswer = document.getElementById(`step3_${i}`).value.trim();
+      if (userAnswer === answersStep3[i]) {
+        score++;
+      }
+    }
+    const resultEl = document.getElementById("resultStep3");
+    if (score === answersStep3.length) {
+      resultEl.innerHTML = `<span class="correct">잘했어요! ${score}/${answersStep3.length} 정답입니다.</span>`;
+    } else {
+      resultEl.innerHTML = `<span class="incorrect">${score}/${answersStep3.length} 정답. 다시 시도해보세요!</span>`;
+    }
+  }
+
+  // STEP 4: 3~4글자 비우기
+  function checkStep4() {
+    let score = 0;
+    for (let i = 0; i < answersStep4.length; i++) {
+      const userAnswer = document.getElementById(`step4_${i}`).value.trim();
+      if (userAnswer === answersStep4[i]) {
+        score++;
+      }
+    }
+    const resultEl = document.getElementById("resultStep4");
+    if (score === answersStep4.length) {
+      resultEl.innerHTML = `<span class="correct">멋져요! ${score}/${answersStep4.length} 정답입니다.</span>`;
+    } else {
+      resultEl.innerHTML = `<span class="incorrect">${score}/${answersStep4.length} 정답. 좀 더 도전해보세요!</span>`;
+    }
+  }
+</script>
+
+</body>
+</html>
